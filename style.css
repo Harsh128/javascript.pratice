@@ -1,46 +1,82 @@
 *{
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
 }
-nav{
-    height: 80px;
-    width: 100%;
+.header{
     background-color: aqua;
-    border: 2px solid black;
+    height: 80px;
     display: flex;
-    flex-direction: row-reverse;
-    /* justify-content:space-between; */
+    justify-content: space-between;
     align-items: center;
+    padding: 2px;
+   
 }
-ul,li,a{
-      text-decoration: none;
-      display: inline;
-      margin: 10px;
-      font-size:large;
+.opction{
+      display: flex;
+      justify-content: space-between;
+       gap: 30px;
+       list-style: none;
       
-}     
-
-
-#wowo{
-    height:400px;
-    width: 100%;
-    border: 2px solid green;
-    margin-top:50px;
-    display: flex;
-    flex-direction:row-reverse;
-    /* justify-content: space-evenly; */
-    
-
 }
-.frist{
-    height: 70px;
-    width: 70px;
-    border: 2px solid goldenrod;
-    display: inline-block;
-    /* margin: 10px; */
-    background-color: brown;
-    align-items: center;
 
+.opction,a{
+    text-decoration: none;
+    font-size: large;
+}
+.logo,h2{
+     font-family: "New Rocker", system-ui;
+  font-weight: 900;
+  font-style: normal;
+  margin-left:20px ;
+  padding: 0%;
+ 
     
-    
+}
+span{
+    color: blue;
+     font-family: "New Rocker", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xx-large;
+}
+#ok:hover{
+    background-color:chartreuse; 
+}
+
+
+
+
+.second{
+    background-color:red;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.20px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container,a{
+    font-size: large;
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+}
+a:hover{
+    background-color: aqua;
+    border-radius: 5px;
+}
+.logo,h2{
+         font-family: 'Poppins', sans-serif; 
+   font-size: 28px;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 1px;
 } 
+
