@@ -104,13 +104,35 @@
 // console.log(multiply(3, 6));
 
 
-// h1 = document.querySelector("h1");
-// function changeColor(color, delay, nextColorChange) {
-//     setTimeout(() => {
-//         h1.style.color = color;
-//         if (nextColorChange) nextColorChange();
-//     }, delay);
-// }
+h1 = document.querySelector("h1");
+function changeColor(color, delay, nextColorChange) {
+    return new Promise((resolve,reject)=>{
+         setTimeout(() => {
+        h1.style.color = color;
+        resolve("color changed");
+    }, delay);
+    });
+   
+}
+changeColor("red",1000)
+.then(()=>{
+    console.log ("red color was completed");
+    return changeColor("orange",1000)
+})
+.then(()=>{
+    console.log ("orange color was completed");
+    return changeColor("green",1000)
+})
+.then(()=>{
+    console.log ("green color was completed");
+    return changeColor("blue",1000)
+})
+.then(()=>{
+    console.log ("blue color was completed");
+    return changeColor("orange",1000)
+})
+
+ 
 // changeColor("red", 1000, () => {
 //     changeColor("orange", 1000, () => {
 //         changeColor("green", 1000, () => {
@@ -222,20 +244,41 @@
 // }
 // savetoDb();
 
-function table() {
-    return new Promise((success, failure) => {
-        let innerTablemaching = Math.floor(Math.random() * 20) + 1;
-        if (innerTablemaching > 10) {
-            success("success table")
-            for (let i = innerTablemaching; i < 100; i += 2) {
-                console.log(i);
-            }
-        }
-        else {
-            failure("failure table")
-            console.log (failure);
-        }
+// function table() {
+//     return new Promise((success, failure) => {
+//         let innerTablemaching = Math.floor(Math.random() * 20) + 1;
+//         if (innerTablemaching > 10) {
+//             success("success table")
+//             for (let i = innerTablemaching; i < 100; i += 2) {
+//                 console.log(i);
+//             }
+//         }
+//         else {
+//             failure("failure table")
+           
+//         }
 
-    });
-}
-table();
+//     });
+// }
+
+
+// table("Harsh")
+//     .then((result) => {
+//         console.log(" data 1 was saved");
+//         console.log ("result of promise",result);
+//        return table ("ksa ho app");
+//     })
+//     .then((result)=>{
+//         console.log ("data2 saved");
+//         console.log ("result of promise",result);
+//         return table ("yoyo");
+//     })
+//     .then((result)=>{
+//         console.log ("result of promise",result);
+//       console.log ("data3 saved")
+//     })
+//     .catch((error) => {
+//         console.log("promise was reject")
+//         console.log ("error of promise",error);
+//     })
+
