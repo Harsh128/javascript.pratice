@@ -104,35 +104,51 @@
 // console.log(multiply(3, 6));
 
 
-h1 = document.querySelector("h1");
-function changeColor(color, delay, nextColorChange) {
-    return new Promise((resolve,reject)=>{
-         setTimeout(() => {
-        h1.style.color = color;
-        resolve("color changed");
-    }, delay);
-    });
-   
-}
-changeColor("red",1000)
-.then(()=>{
-    console.log ("red color was completed");
-    return changeColor("orange",1000)
-})
-.then(()=>{
-    console.log ("orange color was completed");
-    return changeColor("green",1000)
-})
-.then(()=>{
-    console.log ("green color was completed");
-    return changeColor("blue",1000)
-})
-.then(()=>{
-    console.log ("blue color was completed");
-    return changeColor("orange",1000)
-})
+// h1 = document.querySelector("h1");
+// function changeColor(color, delay) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             h1.style.color = color;
+//             resolve("color changed");
+//         }, delay);
+//     });
 
- 
+// }
+// async function demo() {
+//     try {
+//     await changeColor("red", 1000);
+//     await changeColor("blue", 1000);
+//     await changeColor("green", 1000);
+//     await changeColor("orange", 1000);
+//     }catch(err){
+//         console.log ("error caught");
+//         console.log (err);
+//     }
+
+// }
+// demo();
+
+
+
+// changeColor("red", 1000)
+//     .then(() => {
+//         console.log("red color was completed");
+//         return changeColor("orange", 1000)
+//     })
+//     .then(() => {
+//         console.log("orange color was completed");
+//         return changeColor("green", 1000)
+//     })
+//     .then(() => {
+//         console.log("green color was completed");
+//         return changeColor("blue", 1000)
+//     })
+//     .then(() => {
+//         console.log("blue color was completed");
+//         return changeColor("orange", 1000)
+//     })
+
+
 // changeColor("red", 1000, () => {
 //     changeColor("orange", 1000, () => {
 //         changeColor("green", 1000, () => {
@@ -149,9 +165,9 @@ changeColor("red",1000)
 
 // function changeStyle(color, size, delay, nextChange) {
 //     setTimeout(() => {
-//         h4.style.color = color;      
-//         h4.style.fontSize = size;    
-//         if (nextChange) nextChange(); 
+//         h4.style.color = color;
+//         h4.style.fontSize = size;
+//         if (nextChange) nextChange();
 //     }, delay);
 // }
 
@@ -181,9 +197,9 @@ changeColor("red",1000)
 //     () => {
 //         console.log(" Success :your data was saved");
 //         savetoDb("hello world", () => {
-//             console.log("Success2: data to save")    // Neesting podision can work 
+//             console.log("Success2: data to save")    // Neesting podision can work
 //         }, () => {
-//             console.log("failure2 :weak connection ");  
+//             console.log("failure2 :weak connection ");
 //         })
 //     },
 //     () => {
@@ -255,7 +271,7 @@ changeColor("red",1000)
 //         }
 //         else {
 //             failure("failure table")
-           
+
 //         }
 
 //     });
@@ -281,4 +297,89 @@ changeColor("red",1000)
 //         console.log("promise was reject")
 //         console.log ("error of promise",error);
 //     })
+
+// function gogo(pluse, multipuley) {
+//     return new Promise((success, reject) => {
+//         let innerqunting = Math.floor(Math.random() * 20) + 1;
+//         if (innerqunting > 18)
+//             for (let i = 1; i < 80; i += 8) {
+//                 console.log(i);
+//                 success();
+//             } else {
+//             reject();
+//             console.log("reject data was not saved")
+//         }
+
+
+//     });
+
+// }
+// gogo("ok 2")
+//     .then(() => {
+//         console.log("success 1 data is ok");
+//         return gogo("yoyo 3");
+//     })
+//     .then(() => {
+//         console.log("success 2 data is ok");
+//         return gogo("yoyo 4");
+//     })
+//     .then(() => {
+//         console.log("success 3 data is ok");
+//         return gogo("yoyo 5");
+//     })
+//     .then(() => {
+//         console.log("success 4 data is ok");
+//         return gogo("yoyo 6");
+//     })
+//     .catch(() => {
+//         console.log("reject 1 data is not ok");
+
+//     });
+
+
+// function DVD (){
+//     return function (){
+//         let ok= 8+1;
+//         console.log (ok);
+//     }
+// }
+
+// DVD()();
+
+// async function greet() {
+//     throw "weak connection";
+//     return "hello";
+// }
+
+// greet()
+//     .then((result) => {
+//         console.log("promise was resolved");
+//         console.log("result was:", result);
+//     })
+//     .catch(() => {
+//         console.log("promise was rejected with error");
+//     });
+
+
+//     let demo = async()=>{
+//         throw"not good connction";
+//         return 5;
+//     }
+
+
+// function getNum() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             let num = Math.floor(Math.random() * 10) + 1;
+//             console.log (num);
+//             resolve();
+//         }, 1000);
+//     });
+// }
+// async function demo(params) {
+//      await getNum();
+//     getNum();
+//     getNum();
+//     getNum();
+// }
 
