@@ -383,3 +383,39 @@
 //     getNum();
 // }
 
+// let jsonRes =
+//     '{Built a modern E-Commerce Website using HTML, CSS, JavaScript & JSON}'
+
+// let validRes = JSON.parse(jsonRes);
+// console.log(validRes);
+
+
+// let student = {
+//     name:"harsh",
+//     marks: 56 
+// };
+
+// let url = "https://jsonplaceholder.typicode.com/todos/1";
+// fetch(url)
+
+//     .then((Response) => {
+//         console.log(Response);
+//         return Response .json();
+//     })
+//     then((data)=>{
+//         console.log(data); 
+//     })
+
+//     .catch((err) => {
+//         console.log("ERROR -", err);
+//     })
+
+
+    let url = "https://jsonplaceholder.typicode.com/todos/1";
+
+
+    async function getfacts(){
+        let res =await fetch(url);
+        let data = await res.json ();
+        console.log (data.facts);
+    }
